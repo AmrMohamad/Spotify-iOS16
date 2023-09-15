@@ -133,7 +133,7 @@ iOSInjectionProject/
 
 # sensitive data
 
-*Constants.swift
+Constants.swift
 
 # FireBase
 GoogleService-Info.plist

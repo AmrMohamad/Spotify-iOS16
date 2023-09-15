@@ -7,6 +7,7 @@
 
 import Foundation
 
+///The Auth Manager is responsible for handling all the authentication logics
 final class AuthManager {
     static let shared = AuthManager()
     
