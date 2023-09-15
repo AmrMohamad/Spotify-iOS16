@@ -24,6 +24,7 @@
 		2D26548F2AB1E4DB00A023FB /* AudioTrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D26548E2AB1E4DB00A023FB /* AudioTrack.swift */; };
 		2D2654912AB1E4F500A023FB /* Artist.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2654902AB1E4F500A023FB /* Artist.swift */; };
 		2D2654932AB1E50F00A023FB /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D2654922AB1E50F00A023FB /* UserProfile.swift */; };
+		2D32A0EC2AB4EA3A0059F7EB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D32A0EB2AB4EA3A0059F7EB /* Constants.swift */; };
 		2D728BC42A9792C1006A7952 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D728BC32A9792C1006A7952 /* AppDelegate.swift */; };
 		2D728BC62A9792C1006A7952 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D728BC52A9792C1006A7952 /* SceneDelegate.swift */; };
 		2D728BC82A9792C1006A7952 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D728BC72A9792C1006A7952 /* HomeViewController.swift */; };
@@ -49,6 +50,7 @@
 		2D26548E2AB1E4DB00A023FB /* AudioTrack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTrack.swift; sourceTree = "<group>"; };
 		2D2654902AB1E4F500A023FB /* Artist.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Artist.swift; sourceTree = "<group>"; };
 		2D2654922AB1E50F00A023FB /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		2D32A0EB2AB4EA3A0059F7EB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		2D728BC02A9792C1006A7952 /* Spotify-iOS16.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Spotify-iOS16.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D728BC32A9792C1006A7952 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2D728BC52A9792C1006A7952 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -206,6 +208,7 @@
 				2D270C1E2A97A6FE00DED4A6 /* Views */,
 				2D270C202A97A71D00DED4A6 /* ViewModels */,
 				2D270C1D2A97A6E300DED4A6 /* Controllers */,
+				2D32A0EB2AB4EA3A0059F7EB /* Constants.swift */,
 				2D728BD12A9792C2006A7952 /* Info.plist */,
 			);
 			path = "Spotify-iOS16";
@@ -292,6 +295,7 @@
 				2D26548F2AB1E4DB00A023FB /* AudioTrack.swift in Sources */,
 				2D728BC82A9792C1006A7952 /* HomeViewController.swift in Sources */,
 				2D2654752AB1DF1D00A023FB /* AuthViewController.swift in Sources */,
+				2D32A0EC2AB4EA3A0059F7EB /* Constants.swift in Sources */,
 				2D728BC42A9792C1006A7952 /* AppDelegate.swift in Sources */,
 				2D2654932AB1E50F00A023FB /* UserProfile.swift in Sources */,
 				2D2654712AB1DE6F00A023FB /* LibraryViewController.swift in Sources */,
