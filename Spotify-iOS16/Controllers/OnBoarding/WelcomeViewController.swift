@@ -17,6 +17,8 @@ class WelcomeViewController: UIViewController {
         button.setTitleColor(.black, for: .normal)
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 18)
         button.layer.cornerRadius = 10
+        button.layer.shadowOpacity = 0.2
+        button.layer.shadowOffset = CGSize(width: 0, height: 1)
         return button
     }()
     override func viewDidLoad() {
@@ -30,6 +32,8 @@ class WelcomeViewController: UIViewController {
         
         view.addSubview(signInButton)
         signInButton.addTarget(self, action: #selector(didTapSignIn), for: .touchUpInside)
+        
+        
     }
 
     override func viewDidLayoutSubviews() {
@@ -39,13 +43,22 @@ class WelcomeViewController: UIViewController {
     }
     
     
-    /// Preparing the AuthViewController that contains the WebView of SpotifyAuth to get the data of the user
+    /// Preparing the AuthViewController that contains the WebView of SpotifyAuth to get the data of the user.
     @objc func didTapSignIn () {
         let authVC = AuthViewController()
+        authVC.completionHandler = { [weak self] success in
+            DispatchQueue.main.async {
+                self?.handleSignIn(is: success)
+            }
+        }
         authVC.navigationItem.largeTitleDisplayMode = .never
         navigationController?.pushViewController(authVC, animated: true)
     }
     
+    /// Log user in or raise an error
+    func handleSignIn(is success: Bool) {
+        
+    }
     
     
     ///Updating the height constraint of the `signInButton` in the `viewDidLayoutSubviews()` method based on the device's orientation. Ant the height constraint is correctly updated when the device is in landscape or portrait orientation.
@@ -92,6 +105,7 @@ class WelcomeViewController: UIViewController {
                     )
             ]
         )
+        //Using switch here because UIDevice.current.orientation is an enum
         switch UIDevice.current.orientation {
         case .landscapeLeft, .landscapeRight :
             NSLayoutConstraint.activate(
@@ -112,7 +126,25 @@ class WelcomeViewController: UIViewController {
                 ]
             )
         default:
-            print("error")
+            if UIDevice.current.orientation.isLandscape {
+                NSLayoutConstraint.activate(
+                    [
+                        signInButton.heightAnchor
+                            .constraint(
+                                equalToConstant: 35
+                            )
+                    ]
+                )
+            } else {
+                NSLayoutConstraint.activate(
+                    [
+                        signInButton.heightAnchor
+                            .constraint(
+                                equalToConstant: 75
+                            )
+                    ]
+                )
+            }
         }
         
     }
