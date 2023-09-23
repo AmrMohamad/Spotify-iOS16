@@ -46,18 +46,33 @@ class WelcomeViewController: UIViewController {
     /// Preparing the AuthViewController that contains the WebView of SpotifyAuth to get the data of the user.
     @objc func didTapSignIn () {
         let authVC = AuthViewController()
+        authVC.navigationItem.largeTitleDisplayMode = .never
+        navigationController?.pushViewController(authVC, animated: true)
         authVC.completionHandler = { [weak self] success in
             DispatchQueue.main.async {
                 self?.handleSignIn(is: success)
             }
         }
-        authVC.navigationItem.largeTitleDisplayMode = .never
-        navigationController?.pushViewController(authVC, animated: true)
     }
     
     /// Log user in or raise an error
     func handleSignIn(is success: Bool) {
         
+        guard success else {
+            let alert = UIAlertController(title: "Something wrong",
+                                          message: "Something went wrong wwith signing in, please try again",
+                                          preferredStyle: .alert)
+            alert.addAction(
+                UIAlertAction(title: "Dismiss",
+                              style: .cancel)
+            )
+            present(alert, animated: true)
+            return
+        }
+        
+        let mainAppTabBarVC = TabBarViewController()
+        mainAppTabBarVC.modalPresentationStyle = .fullScreen
+        present(mainAppTabBarVC, animated: true)
     }
     
     

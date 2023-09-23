@@ -43,4 +43,21 @@ class AuthViewController: UIViewController, WKNavigationDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         navigationController?.overrideUserInterfaceStyle = .unspecified
     }
+    
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        guard let url = webView.url else {return}
+        
+        // Exchange the code for access token
+        let component = URLComponents(string: url.absoluteString)
+        guard let code = component?.queryItems?.first(where: {$0.name == "code"})?.value else {return}
+        
+        webView.isHidden = true
+        AuthManager.shared.exchangeCodeForToken(code: code) { [weak self] success in
+            DispatchQueue.main.async {
+                self?.navigationController?.popToRootViewController(animated: true)
+                self?.completionHandler?(success)
+            }
+        }
+    }
 }
+ 

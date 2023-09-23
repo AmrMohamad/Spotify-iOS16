@@ -30,6 +30,7 @@
 		2D728BC82A9792C1006A7952 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D728BC72A9792C1006A7952 /* HomeViewController.swift */; };
 		2D728BCD2A9792C2006A7952 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2D728BCC2A9792C2006A7952 /* Assets.xcassets */; };
 		2D728BD02A9792C2006A7952 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2D728BCE2A9792C2006A7952 /* LaunchScreen.storyboard */; };
+		2DA7B1E52ABC7F1F002387E2 /* AuthResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DA7B1E42ABC7F1F002387E2 /* AuthResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		2D728BCC2A9792C2006A7952 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2D728BCF2A9792C2006A7952 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2D728BD12A9792C2006A7952 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DA7B1E42ABC7F1F002387E2 /* AuthResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +154,7 @@
 				2D26548E2AB1E4DB00A023FB /* AudioTrack.swift */,
 				2D2654902AB1E4F500A023FB /* Artist.swift */,
 				2D2654922AB1E50F00A023FB /* UserProfile.swift */,
+				2DA7B1E42ABC7F1F002387E2 /* AuthResponse.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				2D26547D2AB1E07500A023FB /* ProfileViewController.swift in Sources */,
 				2D26546D2AB1DDD300A023FB /* TabBarViewController.swift in Sources */,
 				2D26548B2AB1E3D000A023FB /* HapticsManager.swift in Sources */,
+				2DA7B1E52ABC7F1F002387E2 /* AuthResponse.swift in Sources */,
 				2D26548F2AB1E4DB00A023FB /* AudioTrack.swift in Sources */,
 				2D728BC82A9792C1006A7952 /* HomeViewController.swift in Sources */,
 				2D2654752AB1DF1D00A023FB /* AuthViewController.swift in Sources */,
