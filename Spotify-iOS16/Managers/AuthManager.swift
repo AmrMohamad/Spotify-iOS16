@@ -17,10 +17,9 @@ final class AuthManager {
         let baseURL   = "https://accounts.spotify.com/authorize?"
         let clientID  = "client_id=\(Constants.clientID)"
         let response  = "response_type=code"
-        let redirect  = "redirect_uri=https://github.com/AmrMohamad/Spotify-iOS16"
-        let scopes    = "scope=user-read-private"
+        let scopes    = "user-read-private%20user-read-email%20playlist-modify-public%20playlist-read-private%20playlist-modify-private%20playlist-read-collaborative%20user-follow-read%20user-follow-modify%20user-library-modify%20user-library-read"
         let dialog    = "show_dialog=TRUE"
-        let urlString = "\(baseURL)\(clientID)&\(response)&\(redirect)&\(scopes)&\(dialog)"
+        let urlString = "\(baseURL)\(clientID)&\(response)&redirect_uri=\(Constants.redirectURL)&scope=\(scopes)&\(dialog)"
         return URL(string: urlString)
     }
     var isSignedIn: Bool{
@@ -64,7 +63,7 @@ final class AuthManager {
             URLQueryItem(name: "code",
                          value: code),
             URLQueryItem(name: "redirect_uri",
-                         value: "https://github.com/AmrMohamad/Spotify-iOS16")
+                         value: Constants.redirectURL)
         ]
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
